@@ -35,6 +35,11 @@ mongoose
     // multi data insert
     return Recipe.insertMany(data);
   })
+  .then((title) => {
+    title.forEach((element) => {
+      console.log(element.title);
+    });
+  })
   .then(() => {
     console.log("Insert multi data successful");
   })
